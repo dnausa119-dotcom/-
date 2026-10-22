@@ -7,7 +7,7 @@ bool espEnabled = false;
 bool espSkeleton = false;
 float maxDistance = 300.0f;
 
-// نقطة بداية الحقن في نظام الآيفون
-%ctor {
+// دالة البدء التلقائية المتوافقة مع الآيفون
+__attribute__((constructor)) static void initFaustHack() {
     NSLog(@"[FaustiOS] Hack loaded successfully on iOS!");
 }
